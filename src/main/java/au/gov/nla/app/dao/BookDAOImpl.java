@@ -9,6 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Component;
 
 import au.gov.nla.app.model.Book;
+import au.gov.nla.app.model.Person;
 
 @Component
 public class BookDAOImpl implements BookDAO {
@@ -26,4 +27,7 @@ public class BookDAOImpl implements BookDAO {
 		return query.getResultList();		
 	}
 
+	public List<Book> getAllBooks() {
+        return em.createQuery("SELECT b FROM Book b", Book.class).getResultList();
+	}
 }

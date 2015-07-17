@@ -27,4 +27,8 @@ public class LibraryService {
 		return personDAO.getAllPeople();
 	}
 	
+	public List<Book> getAllBooks() { 
+		return bookDAO.getAllBooks();
+	}
+	
 }

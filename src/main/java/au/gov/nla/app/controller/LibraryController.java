@@ -23,6 +23,7 @@ public class LibraryController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(@ModelAttribute("model") ModelMap model) {
         model.addAttribute("peopleList", libraryService.getAllPeople());
+        model.addAttribute("bookList", libraryService.getAllBooks());
         return "index";
     }	
 

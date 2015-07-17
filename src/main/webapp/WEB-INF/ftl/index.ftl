@@ -9,8 +9,7 @@
 <body>
  
 	<div class="bs-example">
-	  
-		<div class="bootstrap-table" style="width: 600px; border: 1px; float: left; padding: 20px">
+		<div class="bootstrap-table" style="width: 700px; border: 1px; float: left; padding: 70px">
 
 	  		<h3>People</h3>
 
@@ -31,8 +30,35 @@
 				
 			</table>
 	 	
+		</div>
+	</div>
+		
+		
+	<div class="bs-example">
+		<div class="bootstrap-table" style="width: 700px; border: 1px; float: left; padding: 70px">
+
+	  		<h3>Books</h3>
+
+			<table class="table table-hover" id="book-table">
+				<tr>
+					<th>Title</th>  
+					<th>Author</th>  
+					<th>ISBN</th> 
+				</tr>
+				
+				<#list model["bookList"] as book>
+				<tr>
+					<td>${book.title}</td> 
+					<td>${book.author}</td> 
+					<td>${book.isbn}</td> 					
+				</tr>
+				</#list>
+				
+			</table>
+	 	
 		</div>		
 	</div>
+	
 	  
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="Books on loan">
   		<div class="modal-dialog" role="document">

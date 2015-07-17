@@ -10,4 +10,5 @@ public interface BookDAO {
 	
 	public List<Book> getBooksByPerson(int personId);
 	
+	public List<Book> getAllBooks();
 }
